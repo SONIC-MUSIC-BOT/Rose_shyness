@@ -1,7 +1,7 @@
 {
-    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+    "name": "SONIC MUSIC",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://telegra.ph/file/56d1760224589ee370186.jpg",
+    "logo": "https://telegra.ph/file/b5281f70c4dc630ee3e62.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -29,17 +29,17 @@
       },
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "",
+        "value": "mongodb+srv://lucifer:ASShaw96@lucifer.vuows.mongodb.net/lucifer?retryWrites=true&w=majority",
         "required": true
       },
       "MUSIC_BOT_NAME": {
         "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
-        "value": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+        "value": "SONIC MUSIC",
         "required": true
       },
       "OWNER_ID": {
         "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "",
+        "value": "5301059909 208837121",
         "required": true
       },
       "STRING_SESSION": {
