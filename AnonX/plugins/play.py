@@ -11,6 +11,7 @@ import config
 from config import (BANNED_USERS, lyrical, YAFA_NAME,
                     YAFA_CHANNEL, CHANNEL_SUDO)
 from strings import get_command
+from strings.filters import command
 from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
 from AnonX.core.call import Anon
@@ -49,6 +50,12 @@ async def check_is_joined(message):
 PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 
+@app.on_message(
+    command(["استماع","اشتغل"])
+    & ~filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
 @app.on_message(
     filters.command(PLAY_COMMAND)
     & filters.group
