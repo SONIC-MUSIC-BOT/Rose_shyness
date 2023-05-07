@@ -3,6 +3,7 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
+from strings.filters import command
 from AnonX import app
 from AnonX.core.call import Anon
 from AnonX.utils.database import is_music_playing, music_on
@@ -15,6 +16,12 @@ RESUME_COMMAND = get_command("RESUME_COMMAND")
 
 @app.on_message(
     filters.command(RESUME_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["استمر","اكمل"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
