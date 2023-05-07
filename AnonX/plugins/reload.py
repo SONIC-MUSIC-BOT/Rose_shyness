@@ -5,6 +5,7 @@ from pyrogram.types import CallbackQuery, Message
 
 from config import BANNED_USERS, MUSIC_BOT_NAME, adminlist, lyrical
 from strings import get_command
+from strings.filters import command
 from AnonX import app
 from AnonX.core.call import Anon
 from AnonX.misc import db
@@ -20,6 +21,12 @@ RESTART_COMMAND = get_command("RESTART_COMMAND")
 
 @app.on_message(
     filters.command(RELOAD_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["حدث"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
@@ -48,6 +55,12 @@ async def reload_admin_cache(client, message: Message, _):
 
 @app.on_message(
     filters.command(RESTART_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["ريستارت"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
