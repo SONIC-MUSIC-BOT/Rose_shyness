@@ -5,6 +5,7 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, MUSIC_BOT_NAME, PING_IMG_URL
 from strings import get_command
+from strings.filters import command
 from AnonX import app
 from AnonX.core.call import Anon
 from AnonX.utils import bot_sys_stats
@@ -17,6 +18,9 @@ PING_COMMAND = get_command("PING_COMMAND")
 
 @app.on_message(
     filters.command(PING_COMMAND)
+)
+@app.on_message(
+    command(["بنك"])
 )
 @language
 async def ping_com(client, message: Message, _):
