@@ -6,8 +6,8 @@
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from YukkiMusic import app
-from YukkiMusic.utils.database import get_served_chats
+from AnonX import app
+from AnonX.utils.database import get_served_chats
 from config import LOG_GROUP_ID
 
 
