@@ -3,6 +3,7 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
+from strings.filters import command
 from AnonX import app
 from AnonX.utils.database.memorydatabase import (get_loop,
                                                       set_loop)
@@ -14,6 +15,12 @@ LOOP_COMMAND = get_command("LOOP_COMMAND")
 
 @app.on_message(
     filters.command(LOOP_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["كرر"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
