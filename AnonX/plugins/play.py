@@ -52,7 +52,7 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 @app.on_message(
     command(["استماع","اشتغل"])
-    & ~filters.group
+    & filters.group
     & ~filters.edited
     & ~BANNED_USERS
 )
