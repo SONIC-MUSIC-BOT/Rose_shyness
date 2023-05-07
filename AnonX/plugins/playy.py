@@ -23,7 +23,7 @@ from strings import get_command
 from strings.filters import command
 from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
-from AnonX.core.call import Yukki
+from AnonX.core.call import Anon
 from AnonX.utils import seconds_to_min, time_to_seconds
 from AnonX.utils.channelplay import get_channeplayCB
 from AnonX.utils.database import is_video_allowed
