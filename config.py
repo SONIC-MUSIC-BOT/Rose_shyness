@@ -28,6 +28,22 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/SONIC_source")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/SONIC_source_SUPPORT")
 
+BOT_USERNAME = getenv(
+    "BOT_USERNAME", "SONIC_S_BOT"
+)
+
+CHANNEL_SUDO = getenv(
+    "CHANNEL_SUDO", "Manarat_Alqaniten"
+)
+
+YAFA_NAME = getenv(
+    "YAFA_NAME", "✲°• منتدى منارة القانتين •°✲"
+)
+
+YAFA_CHANNEL = getenv(
+   " YAFA_CHANNEL", "https://t.me/Manarat_Alqaniten"
+)
+
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "300"))
