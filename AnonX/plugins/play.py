@@ -42,7 +42,7 @@ async def check_is_joined(message):
         status = await app.get_chat_member(f"{CHANNEL_SUDO}", userid)
         return True
     except Exception:
-        await message.reply_text("**⌔︙  عليك الاشتراك في قناة البوت اولاً :**",reply_markup=force_btn,parse_mode="markdown",disable_web_page_preview=False)
+        await message.reply_text("**✦︙  عليك الاشتراك في قناة البوت اولاً :**",reply_markup=force_btn,parse_mode="markdown",disable_web_page_preview=False)
         return False
 
       
