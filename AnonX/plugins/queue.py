@@ -9,6 +9,7 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
+from strings.filters import command
 from AnonX import app
 from AnonX.misc import db
 from AnonX.utils import (Anonbin, get_channeplayCB,
@@ -44,6 +45,11 @@ def get_duration(playing):
 
 @app.on_message(
     filters.command(QUEUE_COMMAND) & filters.group & ~BANNED_USERS
+)
+@app.on_message(
+    command(["القائمة","القائمه"])
+    & filters.group
+    & ~BANNED_USERS
 )
 @language
 async def ping_com(client, message: Message, _):
@@ -89,16 +95,16 @@ async def ping_com(client, message: Message, _):
         else:
             IMAGE = get_image(videoid, user_id)
     send = (
-        "**⌛️ᴅᴜʀᴀᴛɪᴏɴ:** ᴜɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛɪᴏɴ sᴛʀᴇᴀᴍ\n\nᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
+        "**⌔︙ المدة : ** المدة غير معروفه\n\n⌔︙ اضغط على الزر للحصول على قائمة التشغيل."
         if DUR == "Unknown"
-        else "\nᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
+        else "\nاضغط على الزر للحصول على قائمة التشغيل."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} ᴩʟᴀʏᴇʀ**
+    cap = f"""⌔︙ **{config.MUSIC_BOT_NAME} يشتغل**
 
-📌**ᴛɪᴛʟᴇ:** {title}
+⌔︙ **الاسم : ** {title}
 
-🍒**ᴛʏᴩᴇ:** {typo}
-💖**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {user}
+⌔︙ **نوع البحث : ** {typo}
+⌔︙ **طلب : ** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, "c" if cplay else "g", videoid)
@@ -270,16 +276,16 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
         else:
             IMAGE = get_image(videoid, user_id)
     send = (
-        "**⌛️ᴅᴜʀᴀᴛɪᴏɴ:** ᴜɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛɪᴏɴ sᴛʀᴇᴀᴍ\n\nᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
+        "**⌔︙ المدة : ** المدة غير معروفة\n\n⌔︙ اضغط على الزر للحصول على قائمة التشغيل ."
         if DUR == "Unknown"
-        else "\nᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
+        else "\nاضغط على الزر للحصول على قائمة التشغيل."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} ᴩʟᴀʏᴇʀ**
+    cap = f"""⌔︙ **{config.MUSIC_BOT_NAME} يشتغل**
 
-📌 **ᴛɪᴛʟᴇ:** {title}
+⌔︙  **الاسم : ** {title}
 
-🍒 **ᴛʏᴩᴇ:** {typo}
-💖 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {user}
+⌔︙  **نوع البحث : ** {typo}
+⌔︙  **طلب : ** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, cplay, videoid)
