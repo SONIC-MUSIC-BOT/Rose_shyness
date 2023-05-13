@@ -41,7 +41,7 @@ from AnonX.utils.stream.stream import stream
 PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 @app.on_message(
-    command(["قناه","قناة","تشغيل-قناه","تشغيل-قناة"])
+    command(["شغل","قناة","تشغيل-قناه","تشغيل-قناة"])
     & filters.channel
     & ~filters.edited
     & ~BANNED_USERS
