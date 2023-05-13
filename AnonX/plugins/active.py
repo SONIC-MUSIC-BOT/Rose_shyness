@@ -2,6 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from strings import get_command
+from strings.filters import command
 from AnonX import app
 from AnonX.misc import SUDOERS
 from AnonX.utils.database.memorydatabase import (
@@ -13,9 +14,13 @@ ACTIVEVIDEO_COMMAND = get_command("ACTIVEVIDEO_COMMAND")
 
 
 @app.on_message(filters.command(ACTIVEVC_COMMAND) & SUDOERS)
+@app.on_message(
+    command(["المكالمات"])
+    & SUDOERS
+)
 async def activevc(_, message: Message):
     mystic = await message.reply_text(
-        "ɢᴇᴛᴛɪɴɢ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛs ʟɪsᴛ..."
+        "⌔︙ جارِ الحصول على المعلومات انتظر..."
     )
     served_chats = await get_active_chats()
     text = ""
@@ -24,7 +29,7 @@ async def activevc(_, message: Message):
         try:
             title = (await app.get_chat(x)).title
         except Exception:
-            title = "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+            title = "⌔︙ المجموعه خاصه"
         if (await app.get_chat(x)).username:
             user = (await app.get_chat(x)).username
             text += f"<b>{j + 1}.</b>  [{title}](https://t.me/{user})[`{x}`]\n"
@@ -32,18 +37,22 @@ async def activevc(_, message: Message):
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
         j += 1
     if not text:
-        await mystic.edit_text("ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄʙᴏᴛ...")
+        await mystic.edit_text("⌔︙ لا توجد مجموعات قامت بتشغيل الموسيقى...")
     else:
         await mystic.edit_text(
-            f"**ʟɪsᴛ ᴏғ ᴄᴜʀʀᴇɴᴛʟʏ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄ ʙᴏᴛ :-**\n\n{text}",
+            f"**⌔︙ المجموعات التي قامت بتشغيل الموسيقى :-**\n\n{text}",
             disable_web_page_preview=True,
         )
 
 
 @app.on_message(filters.command(ACTIVEVIDEO_COMMAND) & SUDOERS)
+@app.on_message(
+    command(["مكالمات"])
+    & SUDOERS
+)
 async def activevi_(_, message: Message):
     mystic = await message.reply_text(
-        "ɢᴇᴛᴛɪɴɢ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ʟɪsᴛ..."
+        "⌔︙ جارِ الحصول على المعلومات انتظر..."
     )
     served_chats = await get_active_video_chats()
     text = ""
@@ -52,7 +61,7 @@ async def activevi_(_, message: Message):
         try:
             title = (await app.get_chat(x)).title
         except Exception:
-            title = "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+            title = "⌔︙ المجموعه خاصه"
         if (await app.get_chat(x)).username:
             user = (await app.get_chat(x)).username
             text += f"<b>{j + 1}.</b>  [{title}](https://t.me/{user})[`{x}`]\n"
@@ -60,9 +69,9 @@ async def activevi_(_, message: Message):
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
         j += 1
     if not text:
-        await mystic.edit_text("ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄ ʙᴏᴛ...")
+        await mystic.edit_text("⌔︙ لا توجد مجموعات قامت بتشغيل الفيديو...")
     else:
         await mystic.edit_text(
-            f"**ʟɪsᴛ ᴏғ ᴄᴜʀʀᴇɴᴛʟʏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄ ʙᴏᴛ :-**\n\n{text}",
+            f"**⌔︙ المجموعات التي قامت بتشغيل الفيديو :-**\n\n{text}",
             disable_web_page_preview=True,
         )
