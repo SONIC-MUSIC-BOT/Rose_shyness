@@ -51,7 +51,7 @@ async def start_comm(client, message: Message, _):
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
             m = await message.reply_text(
-                f"⌔︙ جارِ الحصول على المعلومات من  {config.MUSIC_BOT_NAME} ."
+                f"✦︙ جارِ الحصول على المعلومات من  {config.MUSIC_BOT_NAME} ."
             )
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
@@ -111,7 +111,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"⌔︙ {message.from_user.mention} دخل للبوت الان <code>للتحقق من المطورين</code>\n\n⌔︙ **الايدي : ** {sender_id}\n⌔︙ **الاسم : ** {sender_name}",
+                    f"✦︙ {message.from_user.mention} دخل للبوت الان <code>للتحقق من المطورين</code>\n\n✦︙ **الايدي : ** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
                 )
             return
         if name[0:3] == "lyr":
@@ -122,7 +122,7 @@ async def start_comm(client, message: Message, _):
                 return await Telegram.send_split_text(message, lyrics)
             else:
                 return await message.reply_text(
-                    "⌔︙ فشل في الحصول على كلمات الموسيقى."
+                    "✦︙ فشل في الحصول على كلمات الموسيقى."
                 )
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
@@ -133,7 +133,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"⌔︙ {message.from_user.mention} دخل للبوت الان  <code>للحصول على معلومات الفيديو</code>\n\n⌔︙ **الايدي : ** {sender_id}\n⌔︙ **الاسم : ** {sender_name}",
+                    f"✦︙ {message.from_user.mention} دخل للبوت الان  <code>للحصول على معلومات الفيديو</code>\n\n✦︙ **الايدي : ** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
                 )
             return
         if name[0:3] == "inf":
@@ -153,18 +153,18 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-⌔︙ **معلومات الفيديو**
+✦︙ **معلومات الفيديو**
 
-⌔︙  **الاسم : ** {title}
+✦︙  **الاسم : ** {title}
 
-⌔︙ **المدة : ** {duration} 
-⌔︙ **المشاهدات : ** `{views}`
-⌔︙ **تاريخ الرفع : ** {published}
-⌔︙ **اسم القناة : ** {channel}
-⌔︙ **رابط القناة : ** [اضغط هنا]({channellink})
-⌔︙ **رابط الفيديو : ** [اضغط هنا]({link})
+✦︙ **المدة : ** {duration} 
+✦︙ **المشاهدات : ** `{views}`
+✦︙ **تاريخ الرفع : ** {published}
+✦︙ **اسم القناة : ** {channel}
+✦︙ **رابط القناة : ** [اضغط هنا]({channellink})
+✦︙ **رابط الفيديو : ** [اضغط هنا]({link})
 
-⌔︙ تم البحث بواسطة  {config.MUSIC_BOT_NAME}"""
+✦︙ تم البحث بواسطة  {config.MUSIC_BOT_NAME}"""
             key = InlineKeyboardMarkup(
                 [
                     [
@@ -190,7 +190,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"⌔︙ {message.from_user.mention} دخل للبوت الان  <code>للحصول على معلومات الفيديو</code>\n\n⌔︙ **الايدي : ** {sender_id}\n⌔︙ **الاسم : ** {sender_name}",
+                    f"✦︙ {message.from_user.mention} دخل للبوت الان  <code>للحصول على معلومات الفيديو</code>\n\n✦︙ **الايدي : ** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
                 )
     else:
         try:
@@ -223,7 +223,7 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"⌔︙ {message.from_user.mention} دخل للبوت الان .\n\n⌔︙ **الايدي :** {sender_id}\n⌔︙ **الاسم : ** {sender_name}",
+                f"✦︙ {message.from_user.mention} دخل للبوت الان .\n\n✦︙ **الايدي :** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
             )
 
 
