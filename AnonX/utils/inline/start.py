@@ -3,7 +3,7 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 import config
-from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
+from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP, YAFA_CHANNEL, YAFA_NAME
 from AnonX import app
 
 def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
@@ -96,10 +96,8 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                         text=_["S_B_7"], user_id=OWNER
                     ),
                 ]
-        [
-            InlineKeyboardButton(
-                text="✲°• منتدى منارة القانتين •°✲", url="https://t.me/Manarat_Alqaniten" 
-            )
-        ],
-     ]
-    return buttons
+        )
+    buttons.append(
+        [InlineKeyboardButton(text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}")] 
+    )
+    return buttons 
