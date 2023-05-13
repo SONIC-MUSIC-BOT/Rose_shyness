@@ -3,6 +3,7 @@ import math
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 import config
+from config import YAFA_CHANNEL, YAFA_NAME
 from AnonX.utils.formatters import time_to_seconds
 
 
@@ -62,6 +63,11 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         [
             InlineKeyboardButton(
                 text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+            ), 
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
             )
         ],
     ]
@@ -119,6 +125,11 @@ def telegram_markup_timer(_, chat_id, played, dur):
         [
             InlineKeyboardButton(
                 text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+            ), 
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
             )
         ],
     ]
@@ -148,6 +159,11 @@ def stream_markup(_, videoid, chat_id):
         [
             InlineKeyboardButton(
                 text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+            ), 
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
             )
         ],
     ]
@@ -174,6 +190,11 @@ def telegram_markup(_, chat_id):
         [
             InlineKeyboardButton(
                 text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+            ), 
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
             )
         ],
     ]
@@ -199,6 +220,11 @@ def track_markup(_, videoid, user_id, channel, fplay):
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
                 callback_data=f"forceclose {videoid}|{user_id}",
+            ), 
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
             )
         ],
     ]
@@ -329,6 +355,11 @@ def queue_markup(_, videoid, chat_id):
         [
             InlineKeyboardButton(
                 text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+            ), 
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
             )
         ],
     ]
