@@ -3,6 +3,7 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, adminlist
 from strings import get_command
+from strings.filters import command
 from AnonX import app
 from AnonX.utils.database import (delete_authuser, get_authuser,
                                        get_authuser_names,
@@ -18,6 +19,12 @@ AUTHUSERS_COMMAND = get_command("AUTHUSERS_COMMAND")
 
 @app.on_message(
     filters.command(AUTH_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["رفع معتمد","معتمد"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
@@ -91,6 +98,12 @@ async def auth(client, message: Message, _):
     & ~filters.edited
     & ~BANNED_USERS
 )
+@app.on_message(
+    command(["تنزيل معتمد","تنمعتمد"])
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
 @AdminActual
 async def unauthusers(client, message: Message, _):
     if not message.reply_to_message:
@@ -127,6 +140,12 @@ async def unauthusers(client, message: Message, _):
 
 @app.on_message(
     filters.command(AUTHUSERS_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["المعتمدين","معتمدين"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
