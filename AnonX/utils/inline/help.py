@@ -23,6 +23,12 @@ def help_pannel(_, START: Union[bool, int] = None):
         [
             [
                 InlineKeyboardButton(
+                    text= "‹ الاوامر العربية ›",
+                    callback_data="help_callback hb13",
+                ),
+            ],
+            [
+                InlineKeyboardButton(
                     text="• المشرفين •",
                     callback_data="help_callback hb1",
                 ),
