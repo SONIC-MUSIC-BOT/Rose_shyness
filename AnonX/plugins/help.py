@@ -6,6 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS
 from strings import get_command, get_string, helpers
+from strings.filters import command
 from AnonX import app
 from AnonX.misc import SUDOERS
 from AnonX.utils import help_pannel
@@ -21,6 +22,12 @@ HELP_COMMAND = get_command("HELP_COMMAND")
 
 @app.on_message(
     filters.command(HELP_COMMAND)
+    & filters.private
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["الاوامر"])
     & filters.private
     & ~filters.edited
     & ~BANNED_USERS
@@ -66,6 +73,12 @@ async def helper_private(
 
 @app.on_message(
     filters.command(HELP_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["الاوامر"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
