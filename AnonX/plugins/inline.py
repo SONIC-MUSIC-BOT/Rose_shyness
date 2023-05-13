@@ -50,8 +50,8 @@ async def inline_query_handler(client, query):
 ⌔︙ **المدة : ** {duration} 
 ⌔︙ **المشاهدات : ** `{views}`
 ⌔︙ **تاريخ الرفع : ** {published}
-⌔︙ **القناة : ** {channel}
-⌔︙ **رابط القناة : ** [الدخول الى القناة]({channellink})
+⌔︙ **اسم القناة : ** {channel}
+⌔︙ **رابط القناة : ** [اضغط هنا]({channellink})
 
 ⌔︙ **تم البحث بواسطة {MUSIC_BOT_NAME}**"""
             answers.append(
