@@ -2,10 +2,6 @@
     ──「 MANARA MUSIC ⚡ 」──
 </h2>
 
-<p align="center">
-  <img src="https://telegra.ph/file/b5281f70c4dc630ee3e62.jpg">
-</p>
-
 
 <p align="center">
   <img src="https://telegra.ph/file/bb9a0e8d411eb2914cdf7.jpg">
