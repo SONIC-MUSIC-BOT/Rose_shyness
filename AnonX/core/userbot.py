@@ -62,7 +62,7 @@ class Userbot(Client):
 
             try:
                 await self.one.send_message(
-                    config.LOG_GROUP_ID, f"**⌔︙ {config.MUSIC_BOT_NAME} المساعد الاول يعمل :**\n\n⌔︙ ايدي المساعد : `{self.one.id}`\n⌔︙ اسم المساعد : {self.one.name}\n⌔︙ معرف المساعد : @{self.one.username}"
+                    config.LOG_GROUP_ID, f"**✦︙ {config.MUSIC_BOT_NAME} المساعد الاول يعمل :**\n\n✦︙ ايدي المساعد : `{self.one.id}`\n✦︙ اسم المساعد : {self.one.name}\n✦︙ معرف المساعد : @{self.one.username}"
                 )
             except:
                 LOGGER(__name__).error(
@@ -89,7 +89,7 @@ class Userbot(Client):
 
             try:
                 await self.two.send_message(
-                    config.LOG_GROUP_ID, f"**⌔︙ {config.MUSIC_BOT_NAME} المساعد الثاني يعمل :**\n\n⌔︙ ايدي المساعد : `{self.two.id}`\n⌔︙ اسم المساعد : {self.two.name}\n⌔︙ معرف المساعد : @{self.two.username}"
+                    config.LOG_GROUP_ID, f"**✦︙ {config.MUSIC_BOT_NAME} المساعد الثاني يعمل :**\n\n✦︙ ايدي المساعد : `{self.two.id}`\n✦︙ اسم المساعد : {self.two.name}\n✦︙ معرف المساعد : @{self.two.username}"
                 )
             except:
                 LOGGER(__name__).error(
@@ -116,7 +116,7 @@ class Userbot(Client):
 
             try:
                 await self.three.send_message(
-                    config.LOG_GROUP_ID, f"**⌔︙ {config.MUSIC_BOT_NAME} المساعد الثالث يعمل :**\n\n⌔︙ ايدي المساعد : `{self.three.id}`\n⌔︙ اسم المساعد  : {self.three.name}\n⌔︙ معرف المساعد  : @{self.three.username}"
+                    config.LOG_GROUP_ID, f"**✦︙ {config.MUSIC_BOT_NAME} المساعد الثالث يعمل :**\n\n✦︙ ايدي المساعد : `{self.three.id}`\n✦︙ اسم المساعد  : {self.three.name}\n✦︙ معرف المساعد  : @{self.three.username}"
                 )
             except:
                 LOGGER(__name__).error(
@@ -143,7 +143,7 @@ class Userbot(Client):
 
             try:
                 await self.four.send_message(
-                    config.LOG_GROUP_ID, f"**⌔︙ {config.MUSIC_BOT_NAME} المساعد الرابع يعمل  :**\n\n⌔︙ ايدي المساعد  : `{self.four.id}`\n⌔︙ اسم المساعد  : {self.four.name}\n⌔︙ معرف المساعد  : @{self.four.username}"
+                    config.LOG_GROUP_ID, f"**✦︙ {config.MUSIC_BOT_NAME} المساعد الرابع يعمل  :**\n\n✦︙ ايدي المساعد  : `{self.four.id}`\n✦︙ اسم المساعد  : {self.four.name}\n✦︙ معرف المساعد  : @{self.four.username}"
                 )
             except:
                 LOGGER(__name__).error(
@@ -170,7 +170,7 @@ class Userbot(Client):
 
             try:
                 await self.five.send_message(
-                    config.LOG_GROUP_ID, f"**⌔︙ {config.MUSIC_BOT_NAME} المساعد الخامس يعمل  :**\n\n⌔︙ ايدي المساعد  : `{self.five.id}`\n⌔︙ اسم المساعد  : {self.five.name}\n⌔︙ معرف المساعد  : @{self.five.username}"
+                    config.LOG_GROUP_ID, f"**✦︙ {config.MUSIC_BOT_NAME} المساعد الخامس يعمل  :**\n\n✦︙ ايدي المساعد  : `{self.five.id}`\n✦︙ اسم المساعد  : {self.five.name}\n✦︙ معرف المساعد  : @{self.five.username}"
                 )
             except:
                 LOGGER(__name__).error(
