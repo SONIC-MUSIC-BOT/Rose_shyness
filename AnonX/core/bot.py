@@ -27,7 +27,7 @@ class AnonXBot(Client):
 
         try:
             await self.send_message(
-                config.LOG_GROUP_ID, f"**⌔︙ {config.MUSIC_BOT_NAME} يعمل الان  :**\n\n⌔︙ ايدي البوت : `{self.id}`\n⌔︙ اسم البوت : {self.name}\n⌔︙ معرف البوت : @{self.username}"
+                config.LOG_GROUP_ID, f"**✦︙ {config.MUSIC_BOT_NAME} يعمل الان  :**\n\n✦︙ ايدي البوت : `{self.id}`\n✦︙ اسم البوت : {self.name}\n✦︙ معرف البوت : @{self.username}"
             )
         except:
             LOGGER(__name__).error(
