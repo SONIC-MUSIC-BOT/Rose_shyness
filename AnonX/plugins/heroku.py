@@ -15,6 +15,7 @@ from pyrogram import filters
 
 import config
 from strings import get_command
+from strings.filters import command
 from AnonX import app
 from AnonX.misc import HAPP, SUDOERS, XCB
 from AnonX.utils.database import (get_active_chats,
@@ -40,6 +41,10 @@ async def is_heroku():
 
 
 @app.on_message(filters.command(GETLOG_COMMAND) & SUDOERS)
+@app.on_message(
+    command(["االسجلات])
+    & SUDOERS
+)
 @language
 async def log_(client, message, _):
     try:
@@ -70,6 +75,10 @@ async def log_(client, message, _):
 
 
 @app.on_message(filters.command(GETVAR_COMMAND) & SUDOERS)
+@app.on_message(
+    command(["متغير"])
+    & SUDOERS
+)
 @language
 async def varget_(client, message, _):
     usage = _["heroku_3"]
@@ -100,6 +109,10 @@ async def varget_(client, message, _):
 
 
 @app.on_message(filters.command(DELVAR_COMMAND) & SUDOERS)
+@app.on_message(
+    command(["حذف متغير"])
+    & SUDOERS
+)
 @language
 async def vardel_(client, message, _):
     usage = _["heroku_6"]
@@ -128,6 +141,10 @@ async def vardel_(client, message, _):
 
 
 @app.on_message(filters.command(SETVAR_COMMAND) & SUDOERS)
+@app.on_message(
+    command(["تعيين متغير"])
+    & SUDOERS
+)
 @language
 async def set_var(client, message, _):
     usage = _["heroku_8"]
@@ -214,6 +231,10 @@ async def usage_dynos(client, message, _):
 
 
 @app.on_message(filters.command(UPDATE_COMMAND) & SUDOERS)
+@app.on_message(
+    command(["ترقيه"])
+    & SUDOERS
+)
 @language
 async def update_(client, message, _):
     if await is_heroku():
@@ -314,6 +335,10 @@ async def update_(client, message, _):
 
 
 @app.on_message(filters.command(REBOOT_COMMAND) & SUDOERS)
+@app.on_message(
+    command(["اعادة التشغيل"])
+    & SUDOERS
+)
 async def restart_(_, message):
     response = await message.reply_text("ʀᴇsᴛᴀʀᴛɪɴɢ...")
     served_chats = await get_active_chats()
