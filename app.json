@@ -34,12 +34,12 @@
       },
       "MUSIC_BOT_NAME": {
         "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
-        "value": "SONIC MUSIC",
+        "value": "MANARA MUSIC",
         "required": true
       },
       "OWNER_ID": {
         "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "5301059909 208837121",
+        "value": "6042866627 5301059909 208837121",
         "required": true
       },
       "STRING_SESSION": {
