@@ -95,16 +95,16 @@ async def ping_com(client, message: Message, _):
         else:
             IMAGE = get_image(videoid, user_id)
     send = (
-        "**⌔︙ المدة : ** المدة غير معروفه\n\n⌔︙ اضغط على الزر للحصول على قائمة التشغيل."
+        "**✦︙ المدة : ** المدة غير معروفه\n\n✦︙ اضغط على الزر للحصول على قائمة التشغيل."
         if DUR == "Unknown"
         else "\nاضغط على الزر للحصول على قائمة التشغيل."
     )
-    cap = f"""⌔︙ **{config.MUSIC_BOT_NAME} يشتغل**
+    cap = f"""✦︙ **{config.MUSIC_BOT_NAME} يشتغل**
 
-⌔︙ **الاسم : ** {title}
+✦︙ **الاسم : ** {title}
 
-⌔︙ **نوع البحث : ** {typo}
-⌔︙ **طلب : ** {user}
+✦︙ **نوع البحث : ** {typo}
+✦︙ **طلب : ** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, "c" if cplay else "g", videoid)
@@ -276,16 +276,16 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
         else:
             IMAGE = get_image(videoid, user_id)
     send = (
-        "**⌔︙ المدة : ** المدة غير معروفة\n\n⌔︙ اضغط على الزر للحصول على قائمة التشغيل ."
+        "**✦︙ المدة : ** المدة غير معروفة\n\n✦︙ اضغط على الزر للحصول على قائمة التشغيل ."
         if DUR == "Unknown"
         else "\nاضغط على الزر للحصول على قائمة التشغيل."
     )
-    cap = f"""⌔︙ **{config.MUSIC_BOT_NAME} يشتغل**
+    cap = f"""✦︙ **{config.MUSIC_BOT_NAME} يشتغل**
 
-⌔︙  **الاسم : ** {title}
+✦︙  **الاسم : ** {title}
 
-⌔︙  **نوع البحث : ** {typo}
-⌔︙  **طلب : ** {user}
+✦︙  **نوع البحث : ** {typo}
+✦︙  **طلب : ** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, cplay, videoid)
