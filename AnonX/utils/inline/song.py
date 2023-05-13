@@ -1,5 +1,6 @@
 from pyrogram.types import InlineKeyboardButton
 import config
+from config import YAFA_CHANNEL, YAFA_NAME
 
 def song_markup(_, vidid):
     buttons = [
@@ -20,6 +21,11 @@ def song_markup(_, vidid):
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"], callback_data="close"
             ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
+            )
         ],
     ]
     return buttons
