@@ -3,6 +3,7 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
+from strings.filters import command
 from AnonX import app
 from AnonX.utils.database import set_cmode
 from AnonX.utils.decorators.admins import AdminActual
@@ -13,6 +14,12 @@ CHANNELPLAY_COMMAND = get_command("CHANNELPLAY_COMMAND")
 
 @app.on_message(
     filters.command(CHANNELPLAY_COMMAND)
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@app.on_message(
+    command(["ربط"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
