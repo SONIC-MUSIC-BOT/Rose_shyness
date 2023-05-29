@@ -8,7 +8,7 @@ async def play_logs(message, streamtype):
         if message.chat.username:
             chatusername = f"@{message.chat.username}"
         else:
-            chatusername = "✦︙ المجموعة خاصه"
+            chatusername = " المجموعة خاصه"
         logger_text = f"""
 ✦︙ **{MUSIC_BOT_NAME} يعمل الان **
 
