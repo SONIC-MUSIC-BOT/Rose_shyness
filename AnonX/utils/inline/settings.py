@@ -1,7 +1,7 @@
 from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
-from config import SUPPORT_GROUP
+from config import SUPPORT_GROUP, YAFA_CHANNEL, YAFA_NAME
 
 
 def setting_markup(_):
@@ -29,6 +29,11 @@ def setting_markup(_):
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"], callback_data="close"
             ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
+            )
         ],
     ]
     return buttons

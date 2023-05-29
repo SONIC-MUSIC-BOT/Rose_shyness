@@ -62,7 +62,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="• اغلاق القائمة •", callback_data=f"close"
             ), 
         ],
         [
@@ -124,7 +124,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="• اغلاق القائمة •", callback_data=f"close"
             ), 
         ],
         [
@@ -158,7 +158,7 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="• اغلاق القائمة •", callback_data=f"close"
             ), 
         ],
         [
@@ -189,7 +189,7 @@ def telegram_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="• اغلاق القائمة •", callback_data=f"close"
             ), 
         ],
         [
@@ -314,6 +314,11 @@ def slider_markup(
                 callback_data=f"slider F|{query_type}|{query}|{user_id}|{channel}|{fplay}",
             ),
         ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
+            )
+        ], 
     ]
     return buttons
 
@@ -323,7 +328,7 @@ close_keyboard = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                        text="• اغلاق القائمة •", callback_data="close"
                     )
                 ]    
             ]
@@ -354,7 +359,7 @@ def queue_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="• اغلاق القائمة •", callback_data=f"close"
             ), 
         ],
         [

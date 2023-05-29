@@ -1,21 +1,29 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
+from config import YAFA_CHANNEL, YAFA_NAME
 
 def botplaylist_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ᴩᴇʀsᴏɴᴀʟ",
+                text=_["PL_B_1"],
                 callback_data="get_playlist_playmode",
             ),
             InlineKeyboardButton(
-                text="ɢʟᴏʙᴀʟ", callback_data="get_top_playlists"
+                text=_["PL_B_8"], callback_data="get_top_playlists"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                text=_["PL_B_4"], callback_data="PM"
             ),
+            InlineKeyboardButton(
+                text=_["CLOSE_BUTTON"], callback_data="close"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
+            )
         ],
     ]
     return buttons
@@ -25,29 +33,31 @@ def top_play_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ᴛᴏᴘ 10 ᴘʟᴀʏʟɪsᴛs", callback_data="SERVERTOP"
+                text=_["PL_B_9"], callback_data="SERVERTOP global"
             )
         ],
         [
             InlineKeyboardButton(
-                text="ᴘᴇʀsᴏɴᴀʟ", callback_data="SERVERTOP user"
+                text=_["PL_B_10"], callback_data="SERVERTOP chat"
             )
         ],
         [
             InlineKeyboardButton(
-                text="ɢʟᴏʙᴀʟ", callback_data="SERVERTOP global"
-            ),
-            InlineKeyboardButton(
-                text="ɢʀᴏᴜᴘ's", callback_data="SERVERTOP chat"
+                text=_["PL_B_11"], callback_data="SERVERTOP user"
             )
         ],
         [
             InlineKeyboardButton(
-                text="ʙᴀᴄᴋ", callback_data="get_playmarkup"
+                text=_["BACK_BUTTON"], callback_data="get_playmarkup"
             ),
             InlineKeyboardButton(
-                text="ᴄʟᴏsᴇ", callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close"
             ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
+            )
         ],
     ]
     return buttons
@@ -57,19 +67,24 @@ def get_playlist_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ᴀᴜᴅɪᴏ", callback_data="play_playlist a"
+                text=_["P_B_1"], callback_data="play_playlist a"
             ),
             InlineKeyboardButton(
-                text="ᴠɪᴅᴇᴏ", callback_data="play_playlist v"
+                text=_["P_B_2"], callback_data="play_playlist b"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="ʙᴀᴄᴋ", callback_data="home_play"
+                text=_["BACK_BUTTON"], callback_data="home_play"
             ),
             InlineKeyboardButton(
-                text="ᴄʟᴏsᴇ", callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close"
             ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
+            )
         ],
     ]
     return buttons
@@ -79,29 +94,31 @@ def top_play_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ᴛᴏᴘ 10 ᴘʟᴀʏʟɪsᴛs", callback_data="SERVERTOP"
+                text=_["PL_B_9"], callback_data="SERVERTOP Global"
             )
         ],
         [
             InlineKeyboardButton(
-                text="ᴘᴇʀsᴏɴᴀʟ", callback_data="SERVERTOP Personal"
+                text=_["PL_B_10"], callback_data="SERVERTOP Group"
             )
         ],
         [
             InlineKeyboardButton(
-                text="ɢʟᴏʙᴀʟ", callback_data="SERVERTOP Global"
-            ),
-            InlineKeyboardButton(
-                text="ɢʀᴏᴜᴘ's", callback_data="SERVERTOP Group"
+                text=_["PL_B_11"], callback_data="SERVERTOP Personal"
             )
         ],
         [
             InlineKeyboardButton(
-                text="ʙᴀᴄᴋ", callback_data="get_playmarkup"
+                text=_["BACK_BUTTON"], callback_data="get_playmarkup"
             ),
             InlineKeyboardButton(
-                text="ᴄʟᴏsᴇ", callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close"
             ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"{YAFA_NAME}", url=f"{YAFA_CHANNEL}",
+            )
         ],
     ]
     return buttons
@@ -111,11 +128,11 @@ def failed_top_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ʙᴀᴄᴋ",
+                text=_["BACK_BUTTON"],
                 callback_data="get_top_playlists",
             ),
             InlineKeyboardButton(
-                text="ᴄʟᴏsᴇ", callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close"
             ),
         ],
     ]
@@ -127,17 +144,17 @@ def warning_markup(_):
         [
             [
                 InlineKeyboardButton(
-                    text="ᴅᴇʟᴇᴛᴇ",
+                    text=_["PL_B_7"],
                     callback_data="delete_whole_playlist",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="ʙᴀᴄᴋ",
+                    text=_["BACK_BUTTON"],
                     callback_data="del_back_playlist",
                 ),
                 InlineKeyboardButton(
-                    text="ᴄʟᴏsᴇ",
+                    text=_["CLOSE_BUTTON"],
                     callback_data="close",
                 ),
             ],
@@ -151,7 +168,7 @@ def close_markup(_):
         [
             [
                 InlineKeyboardButton(
-                    text="✯ ᴄʟᴏsᴇ ✯",
+                    text=_["CLOSE_BUTTON"],
                     callback_data="close",
                 ),
             ]
