@@ -121,6 +121,11 @@ def private_help_panel(_):
         ],
         [
             InlineKeyboardButton(
+                text=" مطور البوت ⚡", url="https://t.me/manaratalqanitin"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
                 text="حسين مطور السورس ⚡", url="https://t.me/Huseenytiq"
             ),
         ],
