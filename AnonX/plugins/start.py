@@ -111,7 +111,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"✦︙ {message.from_user.mention} دخل للبوت الان <code>للتحقق من المطورين</code>\n\n✦︙ **الايدي : ** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
+                    f" {message.from_user.mention} دخل للبوت الان <code>للتحقق من المطورين</code>\n\n✦︙ **الايدي : ** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
                 )
             return
         if name[0:3] == "lyr":
@@ -133,7 +133,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"✦︙ {message.from_user.mention} دخل للبوت الان  <code>للحصول على معلومات الفيديو</code>\n\n✦︙ **الايدي : ** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
+                    f" {message.from_user.mention} دخل للبوت الان  <code>للحصول على معلومات الفيديو</code>\n\n✦︙ **الايدي : ** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
                 )
             return
         if name[0:3] == "inf":
@@ -172,7 +172,7 @@ async def start_comm(client, message: Message, _):
                             text="• مشاهدة •", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="• ✲°• منتدى منارة القانتين •°✲ •", url="https://t.me/Manarat_Alqaniten"
+                            text="✲°• منتدى منارة القانتين •°✲", url="https://t.me/Manarat_Alqaniten"
                         ),
                     ],
                 ]
@@ -190,7 +190,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"✦︙ {message.from_user.mention} دخل للبوت الان  <code>للحصول على معلومات الفيديو</code>\n\n✦︙ **الايدي : ** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
+                    f" {message.from_user.mention} دخل للبوت الان  <code>للحصول على معلومات الفيديو</code>\n\n✦︙ **الايدي : ** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
                 )
     else:
         try:
@@ -223,7 +223,7 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"✦︙ {message.from_user.mention} دخل للبوت الان .\n\n✦︙ **الايدي :** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
+                f" {message.from_user.mention} دخل للبوت الان .\n\n✦︙ **الايدي :** {sender_id}\n✦︙ **الاسم : ** {sender_name}",
             )
 
 
