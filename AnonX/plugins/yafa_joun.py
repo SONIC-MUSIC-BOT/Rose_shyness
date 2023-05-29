@@ -21,7 +21,7 @@ async def must_join_channel(bot: Client, msg: Message):
                 link = chat_info.invite_link
             try:
                 await msg.reply(
-                    f"⌔︙ عذراً، عليك الانضمام الى هذهِ القناة أولاً\n⌔︙ اشترك ثم أرسل : /start",
+                    f"✦︙ عذراً، عليك الانضمام الى هذهِ القناة أولاً\n✦︙ اشترك ثم أرسل : /start",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton(f"{YAFA_NAME}", url=link)]
