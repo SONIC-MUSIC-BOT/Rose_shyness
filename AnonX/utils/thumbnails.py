@@ -125,10 +125,10 @@ async def gen_thumb(videoid, user_id):
         try:
             draw.text(
                 (470, 25),
-                f"SONIC SOURCE",
-                fill="white",
+                f"MANARA SOURCE",
+                fill="red",
                 stroke_width=3,
-                stroke_fill="grey",
+                stroke_fill="white",
                 font=font,
             )
             if para[0]:
