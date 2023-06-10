@@ -15,17 +15,6 @@ import re
 import sys
 from os import getenv
 
-from dotenv import load_dotenv
-#
-
-load_dotenv()
-
-OWNER_ID = getenv("OWNER_ID")
-
-KIMMY = getenv("KIMMY")
-
-OWNER = getenv("OWNER")
-
 
 def get_file_id(msg: Message):
     if msg.media:
@@ -57,8 +46,6 @@ async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/b5281f70c4dc630ee3e62.jpg",
         caption=f"""
-╭──── • ◈ • ────╮ 
-
 ⌔︙معلومات السورس
 
 ⌔︙[سورس سونك](https://t.me/SONIC_source)
@@ -72,8 +59,6 @@ async def huhh(client: Client, message: Message):
 ⌔︙[مجموعة الدعم](https://t.me/SONIC_source_SUPPORT)
 
 ⌔︙[✲°• منتدى منارة القانتين •°✲](https://t.me/Manarat_Alqaniten)
-
-╰──── • ◈ • ────╯ 
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -99,15 +84,35 @@ async def huhh(client: Client, message: Message):
 
 
 @app.on_message(
-    command(["حسين صلاح","مالك السورس","مبرمج","مطور السورس","المبرمج","المطور الاساسي"])
-    & filters.group
+    command(["حسين صلاح","مالك السورس","حسين مطور السورس","مبرمج","مطور السورس","المبرمج","المطور الاساسي"])
     & ~filters.edited
 )
 async def yas(client, message):
     usr = await client.get_chat("Huseenytiq")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌔︙ معلومات مطور السورس\n\n⌔︙ الاسم :{name}\n⌔︙ المعرف :@{usr.username}\n⌔︙ الايدي :`{usr.id}`\n⌔︙ البايو :{usr.bio}**",  
+    await message.reply_photo(photo,       caption=f"**⌔︙معلومات مطور السورس\n\n⌔︙الاسم : {name}\n⌔︙المعرف : @{usr.username}\n⌔︙الايدي : `{usr.id}`\n⌔︙البايو : {usr.bio}**",  
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{usr.username}")
+                ],
+            ]
+        ),
+    )
+              
+
+
+@app.on_message(
+    command(["المطورة","المطوره","أولسنا على الحق","العلوية","مساعده مطور السورس","مساعدة مطور السورس","العلويه","مساعدة المطور الاساسي"])
+    & ~filters.edited
+)
+async def yas(client, message):
+    usr = await client.get_chat("MZ_864")
+    name = usr.first_name
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"**⌔︙معلومات مساعدة مطور السورس\n\n⌔︙الاسم : {name}\n⌔︙المعرف : @{usr.username}\n⌔︙الايدي : `{usr.id}`\n⌔︙البايو : {usr.bio}**",  ط
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -119,51 +124,22 @@ async def yas(client, message):
     )
 
 
-
-
-
 @app.on_message(
-    command(["مطور","مطور البوت","المطور"])
-    & filters.group
+    command(["مناره القانتين","مناره","منارة القانتين","منارة","مطور","المطور "])
     & ~filters.edited
 )
-async def KIMMY(client: Client, message: Message):
-    usr = await client.get_users(OWNER)
+async def yas(client, message):
+    usr = await client.get_chat("manaratalqanitin")
     name = usr.first_name
-    async for photo in client.iter_profile_photos(OWNER, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""**⌔︙ معلومات المطور**
-                    
-⌔︙ المطور :[{usr.first_name}](https://t.me/{OWNER})
-⌔︙ المعرف :@{OWNER} 
-⌔︙ الايدي :`{usr.id}`
-⌔︙ البايو : {usr.bio}
-** 𝗦𝗢𝗡𝗜𝗖 𝗦𝗢𝗨𝗥𝗖𝗘 ⚡** """, 
-reply_markup=InlineKeyboardMarkup(
-          [               
-            [            
-              InlineKeyboardButton (name, url=f"https://t.me/{OWNER}")
-            ],                   
-          ]              
-       )                 
-    )                    
-                    sender_id = message.from_user.id
-                    sender_name = message.from_user.first_name
-                    await app.send_message(OWNER, f"⌔︙  {message.from_user.mention} بحاجه اليك \n\n⌔︙ ايديه : {sender_id} \n\n⌔︙ اسمه : {sender_name}")
-                    return await app.send_message(config.LOG_GROUP_ID, f"⌔︙  {message.from_user.mention} بحاجه اليك \n\n⌔︙ ايديه : {sender_id} \n\n⌔︙ اسمه : {sender_name}")
-
-
-@app.on_message(command("تحويل لصوره"))
-async def elkatifh(client: Client, message: Message):
-    reply = message.reply_to_message
-    if not reply:
-        return await message.reply("⌔︙ قم بالرد على ملصق")
-    if not reply.sticker:
-        return await message.reply("⌔︙ قم بالرد على ملصق.")
-    m = await message.reply("⌔︙ يتم المعالجه..")
-    f = await reply.download(f"{reply.sticker.file_unique_id}.png")
-    await gather(*[message.reply_photo(f),message.reply_document(f)])
-    await m.delete()
-    os.remove(f)
-
-
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"**⌔︙ معلومات المطور\n\n⌔︙الاسم : {name}\n⌔︙المعرف : @{usr.username}\n⌔︙الايدي : `{usr.id}`\n⌔︙البايو : {usr.bio}**",  
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{usr.username}")
+                ],
+            ]
+        ),
+    )
 
