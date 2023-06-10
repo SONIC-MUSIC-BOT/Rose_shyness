@@ -91,7 +91,7 @@ async def yas(client, message):
     usr = await client.get_chat("Huseenytiq")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌔︙معلومات مطور السورس\n\n⌔︙الاسم : {name}\n⌔︙المعرف : @{usr.username}\n⌔︙الايدي : `{usr.id}`\n⌔︙البايو : {usr.bio}**",  
+    await message.reply_photo(photo,       caption=f"**⌔✦︙معلومات مطور السورس\n\n✦︙الاسم : {name}\n✦︙المعرف : @{usr.username}\n✦︙الايدي : `{usr.id}`\n✦︙البايو : {usr.bio}**",  
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -112,7 +112,7 @@ async def yas(client, message):
     usr = await client.get_chat("MZ_864")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌔︙معلومات مساعدة مطور السورس\n\n⌔︙الاسم : {name}\n⌔︙المعرف : @{usr.username}\n⌔︙الايدي : `{usr.id}`\n⌔︙البايو : {usr.bio}**", 
+    await message.reply_photo(photo,       caption=f"**✦︙معلومات مساعدة مطور السورس\n\n✦︙الاسم : {name}\n✦︙المعرف : @{usr.username}\n✦︙الايدي : `{usr.id}`\n✦︙البايو : {usr.bio}**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -132,7 +132,7 @@ async def yas(client, message):
     usr = await client.get_chat("manaratalqanitin")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌔︙ معلومات المطور\n\n⌔︙الاسم : {name}\n⌔︙المعرف : @{usr.username}\n⌔︙الايدي : `{usr.id}`\n⌔︙البايو : {usr.bio}**",  
+    await message.reply_photo(photo,       caption=f"**✦︙معلومات المطور\n\n✦︙الاسم : {name}\n✦︙المعرف : @{usr.username}\n✦︙الايدي : `{usr.id}`\n✦︙البايو : {usr.bio}**",  
     reply_markup=InlineKeyboardMarkup(
             [
                 [
