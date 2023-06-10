@@ -26,5 +26,5 @@ async def on_new_chat_members(client: Client, message: Message):
             chatusername = f"@{message.chat.username}"
         else:
             chatusername = " المجموعة خاصة"
-        lemda_text = f"✦︙ 🌹 تم اضافة البوت لمجموعة جديد ..\n\n✦︙ **المجموعة** › : {matlabi_jhanto}\n✦︙ **ايدي المجموعة** › : {chat_id}\n✦︙ **معرف المجموعة** › : {chatusername}\n✦︙ **المجموع الكلي** › : {served_chats}\n✦︙ **اضيف بواسطة** › : {added_by}"
+        lemda_text = f"✦︙ تم اضافة البوت لمجموعة جديد ..\n\n✦︙ **المجموعة** › : {matlabi_jhanto}\n✦︙ **ايدي المجموعة** › : {chat_id}\n✦︙ **معرف المجموعة** › : {chatusername}\n✦︙ **المجموع الكلي** › : {served_chats}\n✦︙ **اضيف بواسطة** › : {added_by}"
         await lul_message(LOG_GROUP_ID, lemda_text)
