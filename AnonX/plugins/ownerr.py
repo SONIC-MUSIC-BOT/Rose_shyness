@@ -40,7 +40,7 @@ def get_file_id(msg: Message):
 
             
 @app.on_message(
-    command(["سورس سونك","سورس","السورس","سونك سورس", "source"])
+    command(["سورس سونك","سورس","السورس","sonic","سورسي","سونك سورس", "source"])
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
