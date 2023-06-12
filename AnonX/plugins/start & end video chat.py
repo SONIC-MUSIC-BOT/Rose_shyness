@@ -9,7 +9,7 @@ from AnonX import app
 
 @app.on_message(filters.voice_chat_started)
 async def brah(client, message):
-       await message.reply("تم بدأ محادثة صوتية جديدة.")
+       await message.reply("✦︙ تم بدأ محادثة صوتية جديدة.")
 
 @app.on_message(filters.voice_chat_ended)
 async def brah2(client, message):
@@ -18,34 +18,34 @@ async def brah2(client, message):
     ho = divmod(ma[0], 60)
     day = divmod(ho[0], 24)
     if da < 60:
-       await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {da} ثواني**")        
+       await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها {da} ثواني.**")        
     elif 60 < da < 3600:
         if 1 <= ma[0] < 2:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها دقيقه**")
+            await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها دقيقه.**")
         elif 2 <= ma[0] < 3:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها دقيقتين**")
+            await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها دقيقتين.**")
         elif 3 <= ma[0] < 11:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {ma[0]} دقايق**")  
+            await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها {ma[0]} دقايق.**")  
         else:
-            await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {ma[0]} دقيقه**") 
+            await message.reply(f"**✦︙ تم إنهاء المحادثة الصوتية مدتها {ma[0]} دقيقه.**") 
     elif 3600 < da < 86400:
         if 1 <= ho[0] < 2:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها ساعه**")
+            await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها ساعه.**")
         elif 2 <= ho[0] < 3:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها ساعتين**")
+            await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها ساعتين.**")
         elif 3 <= ho[0] < 11:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {ho[0]} ساعات**")  
+            await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها {ho[0]} ساعات.**")  
         else:
-            await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {ho[0]} ساعة**")
+            await message.reply(f"**✦︙ تم إنهاء المحادثة الصوتية مدتها {ho[0]} ساعة.**")
     else:
         if 1 <= day[0] < 2:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها يوم**")
+            await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها يوم.**")
         elif 2 <= day[0] < 3:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها يومين**")
+            await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها يومين.**")
         elif 3 <= day[0] < 11:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {day[0]} ايام**")  
+            await message.reply(f"**✦︙ تم انهاء المحادثة الصوتية مدتها {day[0]} ايام.**")  
         else:
-            await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {day[0]} يوم**")
+            await message.reply(f"**✦︙ تم إنهاء المحادثة الصوتية مدتها {day[0]} يوم.**")
 
 async def send_invite(message):
    for x in message.voice_chat_members_invited.users:
