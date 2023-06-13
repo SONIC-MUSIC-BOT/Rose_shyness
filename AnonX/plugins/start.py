@@ -28,6 +28,11 @@ from AnonX.utils.formatters import get_readable_time
 from AnonX.utils.inline import (help_pannel, private_panel,
                                      start_pannel)
 
+from os import getenv
+from dotenv import load_dotenv
+load_dotenv()
+OWNER = getenv("OWNER")
+
 loop = asyncio.get_running_loop()
 
 
