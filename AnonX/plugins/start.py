@@ -10,6 +10,7 @@ import config
 from config import BANNED_USERS
 from config import OWNER_ID
 from strings import get_command, get_string
+from strings.filters import command
 from AnonX import Telegram, YouTube, app
 from AnonX.misc import SUDOERS, _boot_
 from AnonX.plugins.playlist import del_plist_msg
