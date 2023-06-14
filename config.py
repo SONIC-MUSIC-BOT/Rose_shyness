@@ -45,7 +45,7 @@ YAFA_CHANNEL = getenv(
 )
 
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
-OWNER = getenv("OWNER", "manaratalqanitin"
+OWNER = getenv("OWNER", "6042866627"
 )
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "300"))
