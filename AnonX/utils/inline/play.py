@@ -57,6 +57,9 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
             ),
             InlineKeyboardButton(
+                text="↻", callback_data=f"ADMIN Loop|{chat_id}"
+            ),
+            InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
@@ -119,6 +122,9 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
             ),
             InlineKeyboardButton(
+                text="↻", callback_data=f"ADMIN Loop|{chat_id}"
+            ),
+            InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
@@ -153,6 +159,9 @@ def stream_markup(_, videoid, chat_id):
                 text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
             ),
             InlineKeyboardButton(
+                text="↻", callback_data=f"ADMIN Loop|{chat_id}"
+            ),
+            InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
@@ -182,6 +191,9 @@ def telegram_markup(_, chat_id):
             ),
             InlineKeyboardButton(
                 text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="↻", callback_data=f"ADMIN Loop|{chat_id}"
             ),
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
@@ -352,6 +364,9 @@ def queue_markup(_, videoid, chat_id):
             ),
             InlineKeyboardButton(
                 text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="↻", callback_data=f"ADMIN Loop|{chat_id}"
             ),
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
