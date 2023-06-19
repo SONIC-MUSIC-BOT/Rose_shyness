@@ -137,6 +137,12 @@ async def del_back_playlist(client, CallbackQuery, _):
             _["admin_4"].format(mention),
             reply_markup=close_keyboard
         )
+    elif command == "Loop":
+        await CallbackQuery.answer()
+        await set_loop(chat_id, 3)
+        await CallbackQuery.message.reply_text(
+            _["admin_25"].format(mention, 3)
+        )
     elif command == "Stop" or command == "End":
         await CallbackQuery.answer()
         await Anon.stop_stream(chat_id)
